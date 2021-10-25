@@ -8,16 +8,18 @@ apk add autoconf \
         make
 
 
-mkdir -p /opt/arrow/src
-cd /opt/arrow/src
-git clone https://github.com/apache/arrow.git
-cd arrow/cpp
 
 set -e
 
 : ${ARROW_DIR:=/opt/arrow/src/}
 : ${EXAMPLE_DIR:=/opt/arrow/io}
 : ${ARROW_BUILD_DIR:=/opt/arrow/build}
+
+mkdir -p ${ARROW_DIR}
+cd ${ARROW_DIR}
+git clone https://github.com/apache/arrow.git ${ARROW_DIR}
+cd ${ARROW_DIR}/cpp
+
 
 echo
 echo "=="
