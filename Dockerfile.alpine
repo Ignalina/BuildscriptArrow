@@ -1,0 +1,17 @@
+
+FROM alpine:3.14 as builder
+
+
+COPY ./build_arrow.sh /opt/app-root
+RUN /opt/app-root/build_arrow.sh
+
+#FROM registry.access.redhat.com/ubi8/s2i-base
+#COPY --from=builder /usr/local/include/arrow /usr/local/include/arrow
+#COPY --from=builder /usr/local/include/parquet /usr/local/include/parquet
+#COPY --from=builder /usr/local/include/plasma /usr/local/include/plasma
+#COPY --from=builder /usr/local/include/gandiva /usr/local/include/gandiva
+#COPY --from=builder /usr/local/share/doc/arrow /usr/local/share/doc/arrow
+#COPY --from=builder /usr/local/bin/plasma-store-server /usr/local/bin/plasma-store-server
+
+
+#COPY --from=builder /usr/local/lib64 /usr/local/lib
