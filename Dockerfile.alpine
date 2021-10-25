@@ -3,7 +3,8 @@ FROM alpine:3.14 as builder
 
 
 COPY ./build_arrow.sh /opt/app-root/build_arrow.sh
-RUN /opt/app-root/build_arrow.sh
+RUN apk add bash
+RUN bash /opt/app-root/build_arrow.sh
 
 #FROM registry.access.redhat.com/ubi8/s2i-base
 #COPY --from=builder /usr/local/include/arrow /usr/local/include/arrow
