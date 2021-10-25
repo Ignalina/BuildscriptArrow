@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Dockerbuild') {
       steps {
-        sh 'docker build -f Dockerfile .'
+        sh 'docker build -f Dockerfile.alpine .'
       }
     }
 
