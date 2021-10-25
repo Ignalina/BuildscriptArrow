@@ -38,9 +38,9 @@ mkdir -p $ARROW_BUILD_DIR
 
 pushd $ARROW_BUILD_DIR
 
-NPROC=$(nproc)
+export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 
-cmake -j ${NPROC} $ARROW_DIR/cpp \
+cmake $ARROW_DIR/cpp \
     -DARROW_DEPENDENCY_SOURCE=BUNDLED \
     -DARROW_BUILD_SHARED=OFF \
     -DARROW_BUILD_STATIC=ON \
