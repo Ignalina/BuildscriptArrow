@@ -7,7 +7,8 @@ apk add autoconf \
         gcc \
         make \
         git \
-        openssl-dev
+        openssl-dev \
+        linux-headers
 
 
 
