@@ -8,7 +8,8 @@ apk add autoconf \
         make \
         git \
         openssl-dev \
-        linux-headers
+        linux-headers \
+        zlib-dev
 
 
 
