@@ -6,7 +6,8 @@ apk add autoconf \
         g++ \
         gcc \
         make \
-        git
+        git \
+        openssl-dev
 
 
 
