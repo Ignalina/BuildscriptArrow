@@ -5,7 +5,8 @@ apk add autoconf \
         cmake \
         g++ \
         gcc \
-        make
+        make \
+        git
 
 
 
