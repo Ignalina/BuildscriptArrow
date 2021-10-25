@@ -2,7 +2,7 @@
 FROM alpine:3.14 as builder
 
 
-COPY ./build_arrow.sh /opt/app-root
+COPY ./build_arrow.sh /opt/app-root/build_arrow.sh
 RUN /opt/app-root/build_arrow.sh
 
 #FROM registry.access.redhat.com/ubi8/s2i-base
